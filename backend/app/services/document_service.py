@@ -3,39 +3,29 @@ import pymupdf
 
 class DocumentService:
 
-    def extract_pages(self, pdf_path: str) -> list[dict]:
-        """
-        Extract digital text from a PDF page by page.
+    def extract_pages(self, pdf_path: str):
 
-        Version 1 supports normal text-based PDFs.
-        """
-
-        pdf = pymupdf.open(pdf_path)
+        document = pymupdf.open(pdf_path)
 
         pages = []
 
-        try:
-            for page_number, page in enumerate(pdf, start=1):
+        for page_number, page in enumerate(document, start=1):
 
-                text = page.get_text().strip()
+            text = page.get_text().strip()
 
-                if not text:
-                    continue
-
+            if text:
                 print(
-                    f"Page {page_number}: "
-                    "Using digital text extraction"
+                    f"Page {page_number}: Using digital text extraction"
                 )
 
                 pages.append(
                     {
                         "page": page_number,
                         "text": text,
-                        "extraction_type": "text",
+                        "extraction_type": "digital",
                     }
                 )
 
-        finally:
-            pdf.close()
+        document.close()
 
         return pages

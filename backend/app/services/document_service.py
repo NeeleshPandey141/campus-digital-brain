@@ -1,4 +1,4 @@
-import fitz
+import pymupdf
 
 
 class DocumentService:
@@ -10,7 +10,7 @@ class DocumentService:
         Version 1 supports normal text-based PDFs.
         """
 
-        pdf = fitz.open(pdf_path)
+        pdf = pymupdf.open(pdf_path)
 
         pages = []
 

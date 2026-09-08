@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f8fb;
+  --foreground: #1a1d29;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.answer-card {
+  width: 100%;
+  max-width: 1100px;
+
+  margin-top: 24px;
+  padding: 28px;
+
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.answer-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 24px;
+}
+
+.answer-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e8f0ff;
+  color: #2563eb;
+
+  font-size: 22px;
+}
+
+.answer-label {
+  margin: 0;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.answer-header h2 {
+  margin: 4px 0 0;
+
+  color: #1e293b;
+
+  font-size: 22px;
+}
+
+.answer-content {
+  color: #334155;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  white-space: pre-line;
+}
+
+.sources-section {
+  margin-top: 28px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.sources-section h3 {
+  margin-bottom: 14px;
+
+  color: #1e293b;
+
+  font-size: 16px;
+}
+
+.sources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.source-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.source-icon {
+  font-size: 20px;
+}
+
+.source-document {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.source-page {
+  margin: 3px 0 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
